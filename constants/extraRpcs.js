@@ -147,7 +147,9 @@ blockswap: "Blockswap RPC does not track any kind of user information at the bui
   nocturnDao:
     "As a fundamental practice, we do not collect, store, or process any personal information from our users. This non-collection policy ensures absolute data security and privacy for our users.https://nocturnode.tech/privacy",
   tornadoRPC:
-   "TornadoRPC prioritizes user privacy and data security. We do not track or store any user information that passes through our RPC, except for data that is clearly visible on the blockchain. For detailed information about our privacy practices, see our Privacy Policy: https://rpc.tornadoeth.cash/privacy"
+   "TornadoRPC prioritizes user privacy and data security. We do not track or store any user information that passes through our RPC, except for data that is clearly visible on the blockchain. For detailed information about our privacy practices, see our Privacy Policy: https://rpc.tornadoeth.cash/privacy",
+  bitszn:
+   "No data record"
   };
 
 export const extraRpcs = {
@@ -4231,7 +4233,16 @@ export const extraRpcs = {
   },
 217: {
   rpcs:["https://rpc2.siriusnet.io"]
-}
+},
+1100: {{
+    rpcs: [
+      {
+        url: "https://evm-archive.dymd.bitszn.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.bitszn
+      },
+    ]
+  }
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
 
